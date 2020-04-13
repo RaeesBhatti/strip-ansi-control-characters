@@ -7,7 +7,7 @@ If you spawn a child process in NodeJS with `inherit` or
 terminal screen or mangle information printed by your application.
 This package allows you to show output from child process with all colors
 and formatting but without those pesky clear screen or clear line
-instructions.
+control characters.
 
 ## Usage
 ```js
