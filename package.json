@@ -1,7 +1,7 @@
 {
-  "name": "strip-ansi-csi",
+  "name": "strip-ansi-control-characters",
   "version": "1.0.0",
-  "description": "Strips ANSI Control Sequence Introducer (CSI) codes from string or stream",
+  "description": "Strips ANSI Control Characters from string or stream",
   "main": "index.js",
   "repository": "https://github.com/RaeesBhatti/strip-ansi-control-characters.git",
   "author": "Raees Iqbal <raees.bhatti@gmail.com>",
