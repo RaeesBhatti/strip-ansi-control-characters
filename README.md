@@ -1,7 +1,7 @@
 # strip-ansi-control-characters
 Strips ANSI Control Characters from string or stream.
 
-## Why?
+## Use cases
 If you spawn a child process in NodeJS with `inherit` or
 `pipe` -> `process.std{out,err}` as `stdio`, the child process can clear
 terminal screen or mangle information printed by your application.
