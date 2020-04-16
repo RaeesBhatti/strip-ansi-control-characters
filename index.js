@@ -7,7 +7,7 @@ function StripAnsiCs(input) {
     return input.replace(matcher, '');
   }
 
-  return replaceStream(matcher, '');
+  return replaceStream(matcher, input || '');
 }
 
 module.exports = StripAnsiCs;
