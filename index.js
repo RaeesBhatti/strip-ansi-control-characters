@@ -14,12 +14,13 @@ class AnsiTransformStream extends stream.Transform {
     this.push(contents.replace(REGEXP_ANSI_CC, ''));
   }
 
-  _flush() {
+  _flush(callback) {
     // Emit that last bit of data
     if (this.line.length) {
       this.flushLine(this.line);
       this.line = '';
     }
+    callback();
   }
 
   _transform(chunk, encoding, callback) {
