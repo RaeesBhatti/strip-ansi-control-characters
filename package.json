@@ -22,8 +22,5 @@
     "clear",
     "screen"
   ],
-  "license": "MIT",
-  "dependencies": {
-    "replacestream": "^4.0.3"
-  }
+  "license": "MIT"
 }
