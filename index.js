@@ -40,7 +40,14 @@ class AnsiTransformStream extends stream.Transform {
       } else {
         // Ignoring last chunk intentionally, as it may be incomplete
         for (let i = 0, length = lines.length - 1; i < length; i += 1) {
-          this.flushLine(lines[i]);
+          const currentLine = lines[i];
+          if (currentLine === '\r' || currentLine === '\n' || currentLine === '\r\n') {
+            // .split() with regexp returns the separators, we let these pass through
+            // untouched
+            this.push(currentLine);
+          } else {
+            this.flushLine(lines[i]);
+          }
         }
 
         // Store the last chunk to process at a later time
