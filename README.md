@@ -9,6 +9,13 @@ This package allows you to show output from child process with all colors
 and formatting but without those pesky clear screen or clear line
 control characters.
 
+## API
+
+```js
+function stripFromString(input: string): string
+function stripFromStream(bufferEncoding: string = 'utf8'): stream.Duplex
+```
+
 ## Usage
 ```js
 const stripAnsiCc = require('strip-ansi-control-characters');
@@ -19,9 +26,9 @@ const ps = child_process.spawn('vuepress', ['dev'], {
   stdio: 'pipe',
 });
 
-ps.stdout.pipe(stripAnsiCc()).pipe(process.stdout);
-ps.stderr.pipe(stripAnsiCc()).pipe(process.stderr);
-``` 
+ps.stdout.pipe(stripAnsiCc.stream()).pipe(process.stdout);
+ps.stderr.pipe(stripAnsiCc.stream()).pipe(process.stderr);
+```
 
 ## License
 MIT license - file included in repo
