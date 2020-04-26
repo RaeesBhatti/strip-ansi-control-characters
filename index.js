@@ -58,7 +58,7 @@ function stripFromString(input) {
   if (typeof input !== 'string') {
     throw new Error(`Expected first parameter to be string, got: ${typeof input}`);
   }
-  return input.replace(REGEXP, '');
+  return input.replace(REGEXP_ANSI_CC, '');
 }
 
 function stripFromStream(givenEncoding) {
