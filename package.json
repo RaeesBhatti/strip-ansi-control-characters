@@ -5,6 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/RaeesBhatti/strip-ansi-control-characters.git",
   "author": "Raees Iqbal <raees.bhatti@gmail.com>",
+  "files": ["index.js"],
   "keywords": [
     "ansi",
     "console",
@@ -22,8 +23,5 @@
     "clear",
     "screen"
   ],
-  "license": "MIT",
-  "dependencies": {
-    "replacestream": "^4.0.3"
-  }
+  "license": "MIT"
 }
